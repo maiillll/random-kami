@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    background-color: #eef2f3; /* Latar belakang yang lebih terang */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    display: flex; /* Untuk memusatkan konten */
+    justify-content: center; /* Untuk memusatkan konten */
+    align-items: flex-start; /* Untuk memusatkan konten di bagian atas */
+    min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+}
+
+.container {
+    width: 100%; /* Lebar penuh */
+    max-width: 960px; /* Batasan lebar maksimal */
+    margin: 20px auto; /* Margin atas dan bawah */
+    padding: 30px; /* Padding lebih besar */
+    background-color: #ffffff;
+    border-radius: 12px; /* Sudut lebih membulat */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Bayangan yang lebih kuat */
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600; /* Lebih tebal */
+    letter-spacing: 0.5px; /* Sedikit spasi antar huruf */
+}
+
+h1 {
+    font-size: 2.5em; /* Ukuran lebih besar */
+    color: #3498db; /* Warna biru untuk judul utama */
+}
+
+/* Form Styling */
+.form-kenangan {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #e0e0e0; /* Border lebih halus */
+    border-radius: 10px; /* Sudut membulat */
+    background-color: #f9f9f9; /* Latar belakang form sedikit abu-abu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px; /* Jarak antar group */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Jarak antara label dan input */
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group input[type="file"] { /* Tambahkan input[type="file"] */
+    width: calc(100% - 22px); /* Penyesuaian lebar untuk padding */
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    border-color: #3498db; /* Border biru saat fokus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Custom styling for file input */
+.form-group input[type="file"] {
+    padding: 8px; /* Padding sedikit berbeda untuk file input */
+}
+
+.btn-ig {
+    background-color: #3498db;
+    color: white;
+    padding: 14px ;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    position: relative; /* Diperlukan untuk elemen ::before */
+    overflow: hidden; /* Menyembunyikan kilatan di luar tombol */
+    transition: background-color 0.3s ease;
+}
+
+.btn-ig:hover {
+    background-color: #2980b9;
+}
+
+/* Elemen semu untuk efek kilatan */
+.btn-ig::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai dari luar kiri */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg); /* Membuat kilatan miring */
+    transition: left 0.7s ease;
+}
+
+/* Saat hover, gerakkan kilatannya */
+.btn-ig:hover::before {
+    left: 150%; /* Pindahkan ke luar kanan */
+}
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    position: relative; /* Diperlukan untuk elemen ::before */
+    overflow: hidden; /* Menyembunyikan kilatan di luar tombol */
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Elemen semu untuk efek kilatan */
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Mulai dari luar kiri */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg); /* Membuat kilatan miring */
+    transition: left 5.7s ease;
+}
+
+/* Saat hover, gerakkan kilatannya */
+.btn-submit:hover::before {
+    left: 150%; /* Pindahkan ke luar kanan */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* Galeri Kenangan */
+.galeri-kenangan {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ukuran kartu lebih fleksibel */
+    gap: 25px; /* Jarak antar kartu */
+}
+
+.kartu-kenangan {
+    background-color: #ffffff;
+    border: none; /* Hilangkan border */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Bayangan kartu yang lebih halus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-kenangan:hover {
+    transform: translateY(-7px); /* Efek sedikit naik */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Bayangan lebih kuat saat hover */
+}
+
+.kartu-kenangan img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar sedikit lebih besar */
+    object-fit: cover;
+    border-bottom: 1px solid #eee; /* Garis tipis di bawah gambar */
+}
+
+.kartu-konten {
+    padding: 20px; /* Padding lebih besar */
+}
+
+.kartu-konten h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.kartu-konten small {
+    color: #7f8c8d;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.kartu-konten p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .galeri-kenangan {
+        grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+    }
+}
